@@ -16,7 +16,7 @@ class Solution:
         # Time: O(n ^ 2), 4608 ms
         # Space: O(n), 7.2 MB
         l = len(nums)
-        for i in range(l):
+        for i in range(l - 1):
             for j in range(i + 1, l):
                 if nums[i] + nums[j] == target:
                     return [i, j]
@@ -34,7 +34,7 @@ class Solution:
 if __name__ == "__main__":
     print("001. Two Sum")
     s = Solution()
-    print(s.twoSum2([2, 7, 11, 15], 9))
+    print(s.twoSum([2, 7, 11, 15], 9))
     print("The result should be [0, 1]")
-    print(s.twoSum2([3, 2, 4], 6))
+    print(s.twoSum([3, 2, 4], 6))
     print("The result should be [1, 2]")
